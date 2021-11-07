@@ -1,5 +1,6 @@
 package com.shaprj.test.recruitment.recruitment.data.service
 
+import com.shaprj.test.recruitment.recruitment.api.customer.CustomerResponse
 import com.shaprj.test.recruitment.recruitment.data.model.Customer
 import com.shaprj.test.recruitment.recruitment.data.repo.CustomerRepo
 import org.springframework.beans.factory.annotation.Autowired
@@ -15,5 +16,5 @@ class CustomerService {
         repo.save(customer)
     }
 
-    fun findAll() = repo.findAll()
+    fun findAll() = repo.findAll().map { CustomerResponse(it) }.toList()
 }

@@ -1,6 +1,6 @@
 package com.shaprj.test.recruitment.recruitment.controller
 
-import com.shaprj.test.recruitment.recruitment.api.project.ProjectResponse
+import com.shaprj.test.recruitment.recruitment.api.project.CreateProjectResponse
 import io.swagger.v3.oas.annotations.Operation
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
@@ -13,7 +13,7 @@ class ProjectController {
 
     @GetMapping("all")
     @Operation(tags = ["Project operations"], summary = "Get all projects")
-    fun getAllProjects(): ResponseEntity<ProjectResponse> {
+    fun getAllProjects(): ResponseEntity<CreateProjectResponse> {
         return ResponseEntity.ok(null)
     }
 
