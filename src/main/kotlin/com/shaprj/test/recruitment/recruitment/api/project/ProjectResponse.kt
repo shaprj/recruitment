@@ -3,11 +3,10 @@ package com.shaprj.test.recruitment.recruitment.api.project
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.shaprj.test.recruitment.recruitment.common.Position
 import com.shaprj.test.recruitment.recruitment.data.model.Project
-import com.shaprj.test.recruitment.recruitment.data.model.event.CreateProjectEvent
 import java.time.LocalDateTime
 import java.util.*
 
-class CreateProjectResponse() {
+class ProjectResponse() {
     @JsonProperty
     lateinit var projectId: UUID
 
@@ -26,12 +25,12 @@ class CreateProjectResponse() {
     @JsonProperty
     lateinit var stuff: Map<Position, Int>
 
-    constructor(project: CreateProjectEvent) : this() {
+    constructor(project: Project) : this() {
         this.projectId = project.id
-        this.customerId = project.customerId
         this.projectName = project.projectName
-        this.startDate = project.startDate
+        this.customerId = project.customerId
         this.endDate = project.endDate
+        this.startDate = project.startDate
         this.stuff = project.stuff
     }
 }

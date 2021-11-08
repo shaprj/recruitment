@@ -29,6 +29,6 @@ class EventService {
         update(event, EventStatus.IN_PROCESS)
     }
 
-    fun findAllCreatedEvents() = repo.findAllByStatus(EventStatus.CREATED)
+    fun findAllEvents() = repo.findAllByStatus(EventStatus.CREATED)
 
 }

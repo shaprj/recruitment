@@ -3,11 +3,9 @@ package com.shaprj.test.recruitment.recruitment.api.customer
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.shaprj.test.recruitment.recruitment.common.CustomerType
 import com.shaprj.test.recruitment.recruitment.data.model.Customer
-import com.shaprj.test.recruitment.recruitment.data.model.event.CreateCustomerEvent
 import java.util.*
 
 class CustomerResponse() {
-
     @JsonProperty
     lateinit var id: UUID
 

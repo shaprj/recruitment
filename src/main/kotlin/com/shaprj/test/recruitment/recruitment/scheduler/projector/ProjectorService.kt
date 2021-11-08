@@ -12,7 +12,7 @@ class ProjectorService {
     @Autowired
     lateinit var service: EventService
 
-    fun allEvents() = service.findAllCreatedEvents()
+    fun allEvents() = service.findAllEvents()
 
     @Transactional
     fun handleEvent(eventHandler: EventHandler, event: Event) {

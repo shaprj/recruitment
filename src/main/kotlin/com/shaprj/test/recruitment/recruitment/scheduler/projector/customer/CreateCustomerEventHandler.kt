@@ -21,8 +21,9 @@ class CreateCustomerEventHandler : EventHandler {
     override fun getEventType() = EventType.CreateCustomerEvent
 
     override fun handle(id: UUID) {
-        val e = eventService.findById(id).get()
-        val customer = Customer(e.customerName, e.customerLastName, e.type)
-        service.save(customer)
+        eventService.findById(id).ifPresent {
+            val customer = Customer(it.customerName, it.customerLastName, it.type)
+            service.save(customer)
+        }
     }
 }
