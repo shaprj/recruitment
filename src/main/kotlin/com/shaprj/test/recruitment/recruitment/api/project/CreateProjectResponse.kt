@@ -2,7 +2,6 @@ package com.shaprj.test.recruitment.recruitment.api.project
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.shaprj.test.recruitment.recruitment.common.Position
-import com.shaprj.test.recruitment.recruitment.data.model.Project
 import com.shaprj.test.recruitment.recruitment.data.model.event.CreateProjectEvent
 import java.time.LocalDateTime
 import java.util.*

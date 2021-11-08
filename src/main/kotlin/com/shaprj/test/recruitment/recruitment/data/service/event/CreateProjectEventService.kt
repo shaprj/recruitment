@@ -35,7 +35,7 @@ class CreateProjectEventService {
     fun findById(id: UUID) = repo.findById(id)
 
     @Transactional
-    fun addCustomer(request: CreateProjectRequest): CreateProjectResponse {
+    fun addProject(request: CreateProjectRequest): CreateProjectResponse {
         val event = Event(LocalDateTime.now(), EventStatus.CREATED, EventType.CreateProjectEvent)
         eventRepo.save(event)
         val project = CreateProjectEvent(request.customerId, request.projectName, request.startDate, request.endDate, request.stuff, event.id)

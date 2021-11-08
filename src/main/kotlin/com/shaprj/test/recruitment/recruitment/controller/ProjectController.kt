@@ -1,6 +1,5 @@
 package com.shaprj.test.recruitment.recruitment.controller
 
-import com.shaprj.test.recruitment.recruitment.api.customer.CreateCustomerRequest
 import com.shaprj.test.recruitment.recruitment.api.project.CreateProjectRequest
 import com.shaprj.test.recruitment.recruitment.api.project.CreateProjectResponse
 import com.shaprj.test.recruitment.recruitment.api.project.ProjectResponse
@@ -24,7 +23,7 @@ class ProjectController {
     @PostMapping("/add")
     @Operation(tags = ["Project operations"], summary = "Create project")
     fun createCustomerRequest(@RequestBody request: CreateProjectRequest): ResponseEntity<CreateProjectResponse> {
-        return ResponseEntity.ok().body(createProjectService.addCustomer(request))
+        return ResponseEntity.ok().body(createProjectService.addProject(request))
     }
 
     @GetMapping("/all")

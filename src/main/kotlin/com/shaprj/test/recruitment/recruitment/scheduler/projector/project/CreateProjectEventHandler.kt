@@ -1,6 +1,7 @@
 package com.shaprj.test.recruitment.recruitment.scheduler.projector.project
 
 import com.shaprj.test.recruitment.recruitment.common.EventType
+import com.shaprj.test.recruitment.recruitment.common.Position
 import com.shaprj.test.recruitment.recruitment.data.model.Project
 import com.shaprj.test.recruitment.recruitment.data.service.ProjectService
 import com.shaprj.test.recruitment.recruitment.data.service.event.CreateProjectEventService

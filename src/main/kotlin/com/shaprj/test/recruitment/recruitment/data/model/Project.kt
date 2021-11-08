@@ -11,7 +11,7 @@ class Project(
     val projectName: String,
     val startDate: LocalDateTime,
     val endDate: LocalDateTime,
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(
         name = "project_stuff",
         joinColumns = [JoinColumn(name = "project_id", referencedColumnName = "id")]
@@ -22,4 +22,4 @@ class Project(
     @Id
     @Column(name = "id")
     val id: UUID = UUID.randomUUID()
-)
+) {}
